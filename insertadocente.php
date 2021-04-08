@@ -21,13 +21,29 @@ if (isset($_POST['insertadocente'])) {
 
   $query = "INSERT INTO docente(Identificacion,PrimerNombre,SegundoNombre, PrimerApellido, SegundoApellido, FechaNacimiento, Sexo, Celular, Correo, Direccion, Ciudad, Departamento, Pais) VALUES ('$Identificacion', '$PrimerNombre', '$SegundoNombre', '$PrimerApellido', '$SegundoApellido', '$FechaNacimiento', '$Sexo', '$Celular', '$Correo', '$Direccion', '$Ciudad', '$Departamento', '$Pais')";
   $result = mysqli_query($conn, $query);
-  if(!$result) {
-    die("Ocurrio un error, verifique los datos registrados.");
-  }
+  
 
-  $_SESSION['message'] = 'Docente Registrado exitosamente!';
-  $_SESSION['message_type'] = 'success';
-  header('Location: GestionDocente.php');
+  if(!$result) 
+{ 
+echo" 
+<script language='javascript'> 
+alert('ERROR AL GUARDAR DATOS, PROBABLE CLAVE REPETIDA') 
+window.location='GestionDocente.php' 
+</script>"; 
+exit(); 
+} 
+else 
+{ 
+echo" 
+<script language='javascript'> 
+alert('Registro exitoso, Presione OK para Continuar') 
+window.location='GestionDocente.php' 
+</script>"; 
+}
+//LINEAS COMENTADAS FUNCIONAN PERO POR AHORA NO LAS USARE
+ // $_SESSION['message'] = 'Docente Registrado exitosamente!';
+  //$_SESSION['message_type'] = 'success';
+  //header('Location: GestionDocente.php');
 
 }
 

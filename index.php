@@ -14,7 +14,7 @@ if ($_POST) {
 	$TipoUsuario = $_POST['TipoUsuario'];
 	$Contraseña = $_POST['Contraseña'];
 
-	$sql = "SELECT Identificacion, Usuario, Contraseña, TipoUsuario, PrimerNombre, PrimerApellido FROM usuario WHERE Usuario='$Usuario'";
+	$sql = "SELECT Identificacion, Usuario, Contraseña, TipoUsuario FROM usuario WHERE Usuario='$Usuario'";
 	//echo $sql;
 	$resultado = $mysqli->query($sql);
 	$num = $resultado->num_rows;
@@ -37,7 +37,6 @@ if ($_POST) {
 		if ($password_bd == $pass_c and $usuario_bd == $usuario_c and $tipousuario_bd == $tipousuario_c) {
 
 			$_SESSION['Identificacion'] = $row['Identificacion'];
-			$_SESSION['PrimerNombre'] = $row['PrimerNombre'];
 			$_SESSION['TipoUsuario'] = $row['TipoUsuario'];
 			$_SESSION['Usuario'] = $row['Usuario'];
 

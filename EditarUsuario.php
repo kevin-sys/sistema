@@ -6,12 +6,10 @@ if (!isset($_SESSION['Identificacion'])) {
 }
 $Identificacion = $_SESSION['Identificacion'];
 $TipoUsuario = $_SESSION['TipoUsuario'];
-$PrimerNombre = $_SESSION['PrimerNombre'];
+
 
 
 $Contraseña = '';
-$PrimerApellido = '';
-$PrimerNombre = '';
 $TipoUsuario = '';
 $Usuario = '';
 
@@ -22,8 +20,6 @@ if (isset($_GET['Identificacion'])) {
   if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result);
     $Contraseña = $row['Contraseña'];
-    $PrimerApellido = $row['PrimerApellido'];
-    $PrimerNombre = $row['PrimerNombre'];
     $TipoUsuario = $row['TipoUsuario'];
     $Usuario = $row['Usuario'];
   }
@@ -32,13 +28,11 @@ if (isset($_GET['Identificacion'])) {
 if (isset($_POST['update'])) {
   $Identificacion = $_GET['Identificacion'];
   $Contraseña = $_POST['Contraseña'];
-  $PrimerApellido = $_POST['PrimerApellido'];
-  $PrimerNombre = $_POST['PrimerNombre'];
   $TipoUsuario = $_POST['TipoUsuario'];
   $Usuario = $_POST['Usuario'];
 
 
-  $query = "UPDATE usuario set Contraseña = '$Contraseña', PrimerApellido = '$PrimerApellido',PrimerNombre='$PrimerNombre',  TipoUsuario='$TipoUsuario', Usuario='$Usuario' WHERE Identificacion=$Identificacion";
+  $query = "UPDATE usuario set Contraseña = '$Contraseña', TipoUsuario='$TipoUsuario', Usuario='$Usuario' WHERE Identificacion=$Identificacion";
   mysqli_query($mysqli, $query);
   $_SESSION['message'] = 'Usuario Modificado exitosamente!';
   $_SESSION['message_type'] = 'warning';
@@ -58,13 +52,7 @@ if (isset($_POST['update'])) {
             <input name="Identificacion" type="text" class="form-control" value="<?php echo $Identificacion; ?>" readonly placeholder="Actualizar Identificacion" autofocus>
           </div>
 
-          <div class="form-group">
-            <input name="PrimerNombre" type="text" class="form-control" value="<?php echo $PrimerNombre; ?>" placeholder="Actualizar Primer Nombre" autofocus required oninvalid="setCustomValidity('El campo Primer nombre es obligatorio')" oninput="setCustomValidity('')" />
-          </div>
-
-          <div class="form-group">
-            <input name="PrimerApellido" type="text" class="form-control" value="<?php echo $PrimerApellido; ?>" placeholder="Actualizar Primer Apellido" autofocus required oninvalid="setCustomValidity('El campo Primer Apellido es obligatorio')" oninput="setCustomValidity('')" />
-          </div>
+         
 
           <div class="form-group">
             <input name="TipoUsuario" type="text" class="form-control" value="<?php echo $TipoUsuario; ?>" readonly placeholder="Actualizar Tipo de Usuario">

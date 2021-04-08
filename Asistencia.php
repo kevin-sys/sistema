@@ -10,7 +10,8 @@ if (!isset($_SESSION['Identificacion'])) {
 
 $Identificacion = $_SESSION['Identificacion'];
 $TipoUsuario = $_SESSION['TipoUsuario'];
-$PrimerNombre = $_SESSION['PrimerNombre'];
+$Usuario = $_SESSION['Usuario'];
+
 ?>
 
 
@@ -37,7 +38,7 @@ $PrimerNombre = $_SESSION['PrimerNombre'];
 
     <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $PrimerNombre; ?><i class="fas fa-user fa-fw"></i></a>
+        <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $Usuario; ?><i class="fas fa-user fa-fw"></i></a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="#">Configuración</a>
           <div class="dropdown-divider"></div>
@@ -111,13 +112,13 @@ $PrimerNombre = $_SESSION['PrimerNombre'];
 
           <?php if (isset($_SESSION['message'])) { ?>
             <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
-              <?= $_SESSION['message'] ?>
+              <?= $_SESSION['message']  ?>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
           <?php
-          } ?>
+          }?>
 
 
           <div class="row">

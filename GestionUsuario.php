@@ -10,7 +10,7 @@ if (!isset($_SESSION['Identificacion'])) {
 
 $Identificacion = $_SESSION['Identificacion'];
 $TipoUsuario = $_SESSION['TipoUsuario'];
-$PrimerNombre = $_SESSION['PrimerNombre'];
+$Usuario = $_SESSION['Usuario'];
 
 
 if ($TipoUsuario == 'Administrador') {
@@ -52,7 +52,7 @@ $resultado = $mysqli->query($sql);
 		
 		<ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $PrimerNombre; ?><i class="fas fa-user fa-fw"></i></a>
+				<a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $Usuario; ?><i class="fas fa-user fa-fw"></i></a>
 				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
 					<a class="dropdown-item" href="#">Configuración</a>
 					<div class="dropdown-divider"></div>
@@ -138,15 +138,7 @@ $resultado = $mysqli->query($sql);
 
 							<div class="card card-body">
 								<form action="insertausuario.php" method="POST">
-									<div class="form-group">
-										<label><b>Primer Nombre</b></label>
-										<input type="text" name="PrimerNombre" class="form-control" placeholder="Ingrese el primer nombre" autofocus required="">
-									</div>
-
-									<div class="form-group">
-										<label><b>Primer Apellido</b></label>
-										<input type="text" name="PrimerApellido" class="form-control" placeholder="Ingrese el Primer Apellido" required="">
-									</div>
+									
 
 									<div class="form-group">
 										<label><b>Identificación</b></label>
@@ -184,8 +176,6 @@ $resultado = $mysqli->query($sql);
 									<thead>
 										<tr>
 											<th>Identificación</th>
-											<th>Primer Nombre</th>
-											<th>Primer Apellido</th>
 											<th>Tipo de usuario</th>
 											<th>Usuario</th>
 											<th>Fecha de Registro</th>
@@ -201,8 +191,6 @@ $resultado = $mysqli->query($sql);
 										while ($row = mysqli_fetch_assoc($result_tasks)) { ?>
 											<tr>
 												<td><?php echo $row['Identificacion']; ?></td>
-												<td><?php echo $row['PrimerNombre']; ?></td>
-												<td><?php echo $row['PrimerApellido']; ?></td>
 												<td><?php echo $row['TipoUsuario']; ?></td>
 												<td><?php echo $row['Usuario']; ?></td>
 												<td><?php echo $row['FechaRegistro']; ?></td>

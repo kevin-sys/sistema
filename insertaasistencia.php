@@ -24,6 +24,7 @@ if (isset($_POST['insertaasistencia'])) {
       $_SESSION['message'] = 'Asistencia Registrada exitosamente!';
   $_SESSION['message_type'] = 'success';
   header('Location: Asistencia.php');
+  
   }
 
 
