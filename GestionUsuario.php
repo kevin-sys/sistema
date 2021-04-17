@@ -142,7 +142,9 @@ $resultado = $mysqli->query($sql);
 
 									<div class="form-group">
 										<label><b>Identificación</b></label>
-										<input type="number" name="Identificacion" class="form-control" placeholder="Ingrese la Identificación" required="">
+										<input type="number" name="Identificacion" class="form-control" placeholder="Ingrese la Identificación" minlength="6" maxlength="11"
+                                                pattern="[0-9]{1,12}" title="Solamente se admiten números"
+                                                required="required">
 									</div>
 
 
@@ -158,12 +160,14 @@ $resultado = $mysqli->query($sql);
 
 									<div class="form-group">
 										<label><b>Usuario</b></label>
-										<input type="text" name="Usuario" class="form-control" placeholder="Ingrese el Usuario" required="">
+										<input type="text" name="Usuario" class="form-control" placeholder="Ingrese el Usuario" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" 
+                                            required="required" minlength="3" maxlength="15" title="Solamente se admiten caracteres">
 									</div>
 
 									<div class="form-group">
 										<label><b>Contraseña</b></label>
-										<input type="password" name="Contraseña" class="form-control" placeholder="Ingrese la Contraseña" required="">
+										<input type="password" name="Contraseña" class="form-control" placeholder="Ingrese la Contraseña" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" 
+                                            required="required" minlength="4" maxlength="15" title="Solamente se admiten caracteres">
 									</div>
 
 									<input type="submit" name="insertausuario" class="btn btn-success btn-block" value="Registrar">

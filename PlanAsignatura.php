@@ -132,7 +132,7 @@ $Usuario = $_SESSION['Usuario'];
                                         <div class="form-group">
                                             <label class="control-label">Codigo Plan de Asignatura</label>
                                             <input type="text" class="form-control" name="CodigoPlan"
-                                                placeholder="Codigo del Plan de Asignatura" minlength="2" maxlength="10"
+                                                placeholder="Codigo del Plan de Asignatura" minlength="3" maxlength="10"
                                                 required="required">
                                         </div>
                                     </div>
@@ -175,7 +175,7 @@ $Usuario = $_SESSION['Usuario'];
                                         <div class="form-group">
                                             <label class="control-label">Horas acompañamiento Docente</label>
                                                 <input type="text" class="form-control" name="Hdd"
-                                                placeholder="Horas acompañamiento docente" minlength="1" maxlength="2"
+                                                placeholder="Horas acompañamiento docente" minlength="1" maxlength="3"
                                                 pattern="[0-9]{1,10}" title="Solamente se admiten números"
                                                 required="required">
                                         </div>
@@ -184,7 +184,7 @@ $Usuario = $_SESSION['Usuario'];
                                         <div class="form-group">
                                             <label class="control-label">Horas trabajo practicas</label>
                                                 <input type="text" class="form-control" name="Htp"
-                                                placeholder="Horas trabajo practicas" minlength="1" maxlength="2"
+                                                placeholder="Horas trabajo practicas" minlength="1" maxlength="3"
                                                 pattern="[0-9]{1,10}" title="Solamente se admiten números"
                                                 required="required">
                                         </div>
@@ -194,7 +194,7 @@ $Usuario = $_SESSION['Usuario'];
                                         <div class="form-group">
                                             <label class="control-label">Horas trabajo Independiente</label>
                                                 <input type="text" class="form-control" name="Hti"
-                                                placeholder="Horas trabajo Independiente" minlength="1" maxlength="2"
+                                                placeholder="Horas trabajo Independiente" minlength="1" maxlength="3"
                                                 pattern="[0-9]{1,10}" title="Solamente se admiten números"
                                                 required="required">
                                         </div>

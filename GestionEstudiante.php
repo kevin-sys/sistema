@@ -141,7 +141,7 @@ $Usuario = $_SESSION['Usuario'];
                                         <div class="form-group">
                                             <label class="control-label">Identificación</label>
                                             <input type="text" class="form-control" name="Identificacion"
-                                                placeholder="Digite Identificación" minlength="8" maxlength="15"
+                                                placeholder="Digite Identificación" minlength="6" maxlength="11"
                                                 pattern="[0-9]{1,12}" title="Solamente se admiten números"
                                                 required="required">
                                         </div>
@@ -159,7 +159,7 @@ $Usuario = $_SESSION['Usuario'];
                                             <label class="control-label">Primer Nombre</label>
                                             <input type="text" class="form-control" name="PrimerNombre"
                                             placeholder="Digite Primer Nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" 
-                                            required="required" minlength="3" maxlength="30" title="Solamente se admiten caracteres">
+                                            required="required" minlength="3" maxlength="15" title="Solamente se admiten caracteres">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -167,7 +167,7 @@ $Usuario = $_SESSION['Usuario'];
                                             <label class="control-label">Segundo Nombre</label>
                                             <input type="text" class="form-control" name="SegundoNombre"
                                             placeholder="Digite Segundo Nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" 
-                                            required="required" minlength="3" maxlength="30" title="Solamente se admiten caracteres">
+                                            minlength="3" maxlength="15" title="Solamente se admiten caracteres">
                                         </div>
                                     </div>
 
@@ -176,7 +176,7 @@ $Usuario = $_SESSION['Usuario'];
                                             <label class="control-label">Primer Apellido</label>
                                                 <input type="text" class="form-control" name="PrimerApellido"
                                                 placeholder="Digite Primer Apellido" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,25}" 
-                                                required="required" minlength="3" maxlength="25" title="Solamente se admiten caracteres">
+                                                required="required" minlength="3" maxlength="15" title="Solamente se admiten caracteres">
                                         </div>
                                     </div>
                                 </div>
@@ -188,7 +188,7 @@ $Usuario = $_SESSION['Usuario'];
                                             <label class="control-label">Segundo Apellido</label>
                                                 <input type="text" class="form-control" name="SegundoApellido"
                                                 placeholder="Digite Segundo Apellido" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,25}" 
-                                                required="required" minlength="3" maxlength="25" title="Solamente se admiten caracteres">
+                                                required="required" minlength="3" maxlength="15" title="Solamente se admiten caracteres">
                                         </div>
                                     </div>
 
@@ -252,7 +252,7 @@ $Usuario = $_SESSION['Usuario'];
                                         <div class="form-group">
                                             <label class="control-label">Puntaje ICFES</label>
                                                 <input type="number" class="form-control" name="Icfes"
-                                                placeholder="Digite el puntaje ICFES" minlength="10" maxlength="10"
+                                                placeholder="Digite el puntaje ICFES" minlength="3" maxlength="3"
                                                 pattern="[0-9]{1,10}" title="Solamente se admiten números"
                                                 required="required">
                                         </div>
@@ -262,7 +262,7 @@ $Usuario = $_SESSION['Usuario'];
                                         <div class="form-group">
                                             <label class="control-label">Sisben</label>
                                                 <input type="number" class="form-control" name="Sisben"
-                                                placeholder="Digite el puntaje del Sisben" minlength="2" maxlength="10"
+                                                placeholder="Digite el puntaje del Sisben" minlength="1" maxlength="2"
                                                 pattern="[0-9]{1,10}" title="Solamente se admiten números"
                                                 required="required">
                                         </div>
@@ -293,7 +293,7 @@ $Usuario = $_SESSION['Usuario'];
                                             <label class="control-label">Dirección de domicilio</label>
                                                 <input type="text" class="form-control" name="Direccion"
                                                 placeholder="Digite la Dirección" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ#/°- ]{1,60}" 
-                                                required="required" minlength="10" maxlength="60">
+                                                required="required" minlength="12" maxlength="50">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -301,7 +301,7 @@ $Usuario = $_SESSION['Usuario'];
                                             <label class="control-label">Ciudad</label>
                                                 <input type="text" class="form-control" name="Ciudad"
                                                 placeholder="Digite la ciudad" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,20}" 
-                                                required="required" minlength="3" maxlength="20" title="Solamente se admiten caracteres">
+                                                required="required" minlength="5" maxlength="20" title="Solamente se admiten caracteres">
                                         </div>
                                     </div>
 
@@ -316,7 +316,7 @@ $Usuario = $_SESSION['Usuario'];
                                             <label class="control-label">Departamento</label> 
                                                 <input type="text" class="form-control" name="Departamento"
                                                 placeholder="Digite el Departamento" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,20}" 
-                                                required="required" minlength="4" maxlength="20" title="Solamente se admiten caracteres">
+                                                required="required" minlength="5" maxlength="20" title="Solamente se admiten caracteres">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -324,7 +324,7 @@ $Usuario = $_SESSION['Usuario'];
                                             <label class="control-label">Pais</label> 
                                                 <input type="text" class="form-control" name="Pais"
                                                 placeholder="Digite el Pais" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,20}" 
-                                                required="required" minlength="3" maxlength="20" title="Solamente se admiten caracteres">
+                                                required="required" minlength="5" maxlength="20" title="Solamente se admiten caracteres">
                                         </div>
                                     </div>
                                 </div>

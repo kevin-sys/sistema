@@ -152,7 +152,9 @@ $Usuario = $_SESSION['Usuario'];
 									</div>
 									<div class="form-group">
 										<label><b>Grupo</b></label>
-										<input type="number" name="Grupo" class="form-control" placeholder="Digite el Número del Grupo" autofocus required="">
+										<input type="number" name="Grupo" class="form-control" placeholder="Digite el Número del Grupo" autofocus minlength="1" maxlength="2"
+                                                pattern="[0-9]{1,12}" title="Solamente se admiten números"
+                                                required="required">
 									</div>
 
 

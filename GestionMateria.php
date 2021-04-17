@@ -128,17 +128,18 @@ $Usuario = $_SESSION['Usuario'];
 
 									<div class="form-group">
 										<label><b>Codigo de la Materia</b></label>
-										<input type="text" name="CodigoMateria" class="form-control" placeholder="Digite el codigo de la materia" autofocus required="">
+										<input type="text" name="CodigoMateria" class="form-control" placeholder="Digite el codigo de la materia" autofocus required="required"  minlength="3" maxlength="10" title="Ej:SS603">
 									</div>
 
 									<div class="form-group">
 										<label><b>Nombre de la Materia</b></label>
-										<input type="text" name="NombreMateria" class="form-control" placeholder="Digite el Nombre de la Materia" autofocus required="">
+										<input type="text" name="NombreMateria" class="form-control" placeholder="Digite el Nombre de la Materia" required=""  minlength="5" maxlength="40" title="Ej: Ingeniería de software II">
 									</div>
 
 									<div class="form-group">
 										<label><b>Creditos</b></label>
-										<input type="number" name="NumeroCredito" class="form-control" placeholder="Digite el Número de creditos" autofocus required="">
+										<input type="number" name="NumeroCredito" class="form-control" placeholder="Digite el Número de creditos" minlength="0" maxlength="2"
+                                                pattern="[0-9]{1,10}" title="Solamente se admiten números">
 									</div>
                                     <div class="col-lg-16">
 

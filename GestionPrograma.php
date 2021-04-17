@@ -129,12 +129,15 @@ $Usuario = $_SESSION['Usuario'];
 
 									<div class="form-group">
 										<label><b>Nombre del Programa</b></label>
-										<input type="text" name="NombrePrograma" class="form-control" placeholder="Digite el nombre del programa" autofocus required="">
+										<input type="text" name="NombrePrograma" class="form-control" placeholder="Digite el nombre del programa" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,25}" 
+                                                required="required" minlength="6" maxlength="30" title="Solamente se admiten caracteres">
 									</div>
 
 									<div class="form-group">
 										<label><b>Cantidad de creditos</b></label>
-										<input type="number" name="CantidadCreditos" class="form-control" placeholder="Digite la cantidad de creditos" autofocus required="">
+										<input type="number" name="CantidadCreditos" class="form-control" placeholder="Digite la cantidad de creditos" minlength="1" maxlength="2"
+                                                pattern="[0-9]{1,12}" title="Solamente se admiten números"
+                                                required="required">
 									</div>
 
 									<div class="form-group">

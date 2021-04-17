@@ -84,22 +84,20 @@ if ($_POST) {
 
 
 							<div class="card shadow-lg border-0 rounded-lg mt-2">
-
-
-
-
 								<div class="card-body">
 									<p><img src="logoupc.png" width="150" height="145">
 										<h5 class="text-center font-weight-light mt-1">Iniciar Sesión en</h5>
 										<h3 class="text-center font-weight-light mt-1"><b>Control de Asistencias</b></b></h3>
 									</p>
 									<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-										<div class="form-group"><label class="small mb-1" for="inputEmailAddress">Usuario</label><input class="form-control py-4" name="Usuario" type="text" placeholder="Ingrese Usuario" required="" /></div>
+										<div class="form-group"><label class="small mb-1" for="Usuario">Usuario</label><input class="form-control py-4" name="Usuario" type="text" placeholder="Ingrese Usuario" autofocus="" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" 
+                                            required="required" minlength="3" maxlength="15" title="Solamente se admiten caracteres" /></div>
 
 										<div class="form-group"><label class="small mb-1" for="TipoUsuario">Tipo de Usuario</label><input class="form-control py-4" name="TipoUsuario" type="text" placeholder="Ingrese tipo de Usuario" required="" /></div>
 
 
-										<div class="form-group"><label class="small mb-1" for="inputPassword">Contraseña</label><input class="form-control py-4" id="inputPassword" name="Contraseña" type="password" placeholder="Ingrese Contraseña" required="" /></div>
+										<div class="form-group"><label class="small mb-1" for="inputPassword">Contraseña</label><input class="form-control py-4" id="inputPassword" name="Contraseña" type="password" placeholder="Ingrese Contraseña" required="" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ 0-9]{1,30}" 
+                                            required="required" minlength="4" maxlength="15" title="Solamente se admiten caracteres"/></div>
 										<div class="form-group">
 											<div class="custom-control custom-checkbox"><input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" /><label class="custom-control-label" for="rememberPasswordCheck">Recordar Contraseña</label></div>
 										</div>

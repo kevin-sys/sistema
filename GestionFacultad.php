@@ -119,12 +119,13 @@ $Usuario = $_SESSION['Usuario'];
 								<form action="insertafacultad.php" method="POST">
 									<div class="form-group">
 										<label><b>Nombre Facultad</b></label>
-										<input type="text" name="NombreFacultad" class="form-control" placeholder="Digite el nombre de la facultad" autofocus required="">
+										<input type="text" name="NombreFacultad" class="form-control" placeholder="Digite el nombre de la facultad" autofocus required="required" minlength="6" maxlength="30" title="Solamente se admiten caracteres">
 									</div>
 
 									<div class="form-group">
 										<label><b>Cantidad de Programas</b></label>
-										<input type="number" name="CantidadProgramas" class="form-control" placeholder="Digite la cantidad de programas" autofocus required="">
+										<input type="number" name="CantidadProgramas" class="form-control" placeholder="Digite la cantidad de programas" required=""  minlength="3" maxlength="3" pattern="[0-9]{1,10}" title="Solamente se admiten números">
+                                               
 									</div>
 									<div class="form-group">
 										<label><b>Seleccione sede</b></label><br>
